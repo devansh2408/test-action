@@ -1,0 +1,8 @@
+{
+  "start_new_chat": "Neuen Chat starten",
+  "code_interpreter": {
+    "run": "läuft",
+    "complete": "vollständig",
+    "aborted": "abgebrochen"
+  }
+}
