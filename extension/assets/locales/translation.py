@@ -33,7 +33,7 @@ def translate_json_to_locales(input_file, output_directory, locales):
     with open(input_file, 'r', encoding='utf-8') as file:
         en_data = json.load(file)
     for locale in locales:
-        output_file = f"{locale.split('-')[0]}/translation.json"
+        output_file = f"{output_directory}/{locale.split('-')[0]}/translation.json"
 
         # Check if the translation file already exists
         if os.path.exists(output_file):
@@ -44,7 +44,7 @@ def translate_json_to_locales(input_file, output_directory, locales):
             translated_data = update_translated_data(existing_data, en_data, locale)
         else:
 
-            output_dir = f"{locale.split('-')[0]}"
+            output_dir = f"{output_directory}/{locale.split('-')[0]}"
             # If the locale folder is not present create folder
             if not os.path.exists(output_dir):
                 os.mkdir(output_dir)
