@@ -58,7 +58,7 @@ def translate_json_to_locales(input_file, output_directory, locales):
         print(f"Translation for {locale} saved to {output_file}")
 
 if __name__ == "__main__":
-    en_us_file = "en/translation.json"
-    output_dir = "/"  # Change this to the desired output directory
+    en_us_file = "extension/assets/locales/en/translation.json"
+    output_dir = "extension/assets/locales"  # Change this to the desired output directory
     supported_locales = ["zh-CN", "es-ES", "de-DE"]
     translate_json_to_locales(en_us_file, output_dir, supported_locales)
