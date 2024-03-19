@@ -1,0 +1,26 @@
+name: Run Python Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.12.2
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install deep_translator
+        
+    - name: Run Python Script
+      run: python /assets/locales/translation.py
