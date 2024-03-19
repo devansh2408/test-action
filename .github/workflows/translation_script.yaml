@@ -27,7 +27,7 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name 'Devansh Saini'
+        git config --global user.name 'devansh2408'
         git config --global user.email 'devansh@foyer.work'
       
     - name: Commit and Push Changes
