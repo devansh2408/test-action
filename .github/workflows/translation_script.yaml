@@ -23,4 +23,4 @@ jobs:
         pip install deep_translator
         
     - name: Run Python Script
-      run: python /assets/locales/translation.py
+      run: python extension/assets/locales/translation.py
